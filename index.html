@@ -3,290 +3,298 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Web Standards Summit 2026</title>
   </head>
   <body>
-    <!-- Main heading -->
-    <header>
-      <h1>Web Standards Summit 2026</h1>
+    <div class="container">
+      <!-- Main heading -->
+      <header>
+        <h1>Web Standards Summit 2026</h1>
 
-      <!-- section -->
-      <section id="header">
-        <p>September 18-20, 2026</p>
-        <p>Berlin Conference Center Berlin, Germany</p>
-      </section>
-    </header>
-
-    <main id="main-content">
-      <!-- section + nav + list -->
-      <section id="navigation">
-        <p>
-          Web Standards Summit 2026 brings together developers, designers, and
-          accessibility experts to discuss the future of open, interoperable,
-          and inclusive web technologies.
-        </p>
-
-        <nav aria-label="Primary Navigation">
-          <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#conference">Schedule</a></li>
-            <li><a href="#speakers">Speakers</a></li>
-            <li><a href="#registration">Registration</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </section>
-
-      <!-- horizontal line -->
-      <hr />
-
-      <!-- About the summit section -->
-      <section id="about">
-        <h2>About the Summit</h2>
-
-        <p>
-          Web Standards Summit 2026 focuses on practical techniques and emerging
-          standards that help teams build fast, accessible, and future-friendly
-          web experiences.
-        </p>
-      </section>
-
-      <!--  key term section -->
-
-      <section id="key-terms">
-        <h3>Key Terms</h3>
-
-        <dl>
-          <dt>HTML</dt>
-          <dd>
-            HyperText Markup Language, the standard markup language used to
-            define the structure and meaning of content on the web.
-          </dd>
-
-          <dt>CSS</dt>
-          <dd>
-            Cascading Style Sheets, the language used to control the
-            presentation and visual layout of HTML documents.
-          </dd>
-
-          <dt>Web Accessibility</dt>
-          <dd>
-            The practice of designing and developing websites so that people
-            with disabilities can perceive, understand, navigate, and interact
-            with the web.
-          </dd>
-        </dl>
-      </section>
-
-      <!-- horizontal line -->
-      <hr />
-
-      <!-- Conference Section + table -->
-
-      <section id="conference">
-        <h2>Conference Schedule</h2>
-
-        <p>
-          The summit spans three days of talks, workshops, and networking
-          focused on modern web standards.
-        </p>
-
-        <section>
-          <table>
-            <caption>
-              Day 1 — Friday, September 18, 2026
-            </caption>
-            <thead>
-              <tr>
-                <th scope="col">Time</th>
-                <th scope="col">Session</th>
-                <th scope="col">Speakers</th>
-                <th scope="col">Room</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>09:00–10:00</td>
-                <td>Opening Keynote: The State of Web Standards</td>
-                <td>Alex Rivera</td>
-                <td>Auditorium A</td>
-              </tr>
-
-              <tr>
-                <td>10:15–11:00</td>
-                <td>Semantic HTML in Large Applications</td>
-                <td>Priya Desai</td>
-                <td>Room 101</td>
-              </tr>
-
-              <tr>
-                <td>11:15–12:00</td>
-                <td>Modern CSS Layout: Grid and Flexbox</td>
-                <td>Jonas Meier</td>
-                <td>Room 102</td>
-              </tr>
-
-              <tr>
-                <td>13:30–14:30</td>
-                <td>Inclusive Design and Web Accessibility</td>
-                <td>Fatima Khan</td>
-                <td>Room 103</td>
-              </tr>
-
-              <tr>
-                <td>14:45–15:30</td>
-                <td>Performance, Core Web Vitals, and Standards</td>
-                <td>Luca Rossi</td>
-                <td>Room 104</td>
-              </tr>
-            </tbody>
-          </table>
+        <!-- section -->
+        <section id="header">
+          <p>September 18-20, 2026</p>
+          <p>Berlin Conference Center Berlin, Germany</p>
         </section>
-      </section>
+      </header>
 
-      <!-- horizontal line -->
-      <hr />
-
-      <!-- Featured speakers section -->
-
-      <section id="speakers">
-        <h2>Featured Speakers</h2>
-
-        <article class="speaker" aria-labelledby="alex-rivera">
-          <h3 id="alex-rivera">Alex Rivera</h3>
+      <main id="main-content">
+        <!-- section + nav + list -->
+        <section id="navigation">
           <p>
-            Alex is a standards advocate and chair of several working groups,
-            helping browser vendors and developers collaborate on interoperable
-            web features.
+            Web Standards Summit 2026 brings together developers, designers, and
+            accessibility experts to discuss the future of open, interoperable,
+            and inclusive web technologies.
           </p>
-          <h4>Topics</h4>
-          <ul class="topics">
-            <li>The State of Web Standards in 2026</li>
-            <li>Interoperability Across Modern Browsers</li>
-            <li>Building for the Next Decade of the Web</li>
-          </ul>
-        </article>
 
-        <article class="speaker" aria-labelledby="priya-desai">
-          <h3 id="priya-desai">Priya Desai</h3>
-          <p>
-            Priya is a frontend architect focusing on semantic markup,
-            maintainable design systems, and accessible component libraries for
-            large-scale products.
-          </p>
-          <h4>Topics</h4>
-          <ul class="topics">
-            <li>Semantic HTML in Design Systems</li>
-            <li>Structuring Complex Interfaces Accessibly</li>
-            <li>Documentation-Driven Frontend Architecture</li>
-          </ul>
-        </article>
+          <nav id="primary-navigation-link" aria-label="Primary Navigation">
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#conference">Schedule</a></li>
+              <li><a href="#speakers">Speakers</a></li>
+              <li><a href="#registration">Registration</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </section>
 
-        <article class="speaker" aria-labelledby="fatima-khan">
-          <h3 id="fatima-khan">Fatima Khan</h3>
-          <p>
-            Fatima is an accessibility specialist who helps organizations
-            integrate inclusive design into every stage of their product
-            lifecycle.
-          </p>
-          <h4>Topics</h4>
-          <ul class="topics">
-            <li>Practical Web Accessibility Testing</li>
-            <li>Designing for Assistive Technologies</li>
-            <li>Accessibility as a Team Practice</li>
-          </ul>
-        </article>
-      </section>
+        <!-- horizontal line -->
+        <br />
 
-      <!-- Registration Form Section -->
+        <div class="cards">
+          <!-- About the summit section -->
+          <section id="about">
+            <h2>About the Summit</h2>
 
-      <section id="registration">
-        <h2>Registration</h2>
+            <p>
+              Web Standards Summit 2026 focuses on practical techniques and
+              emerging standards that help teams build fast, accessible, and
+              future-friendly web experiences.
+            </p>
+          </section>
 
-        <p id="registration-info">
-          Reserve your seat for Web Standards Summit 2026 by completing the
-          registration form below.
-        </p>
+          <!--  key term section -->
 
-        <form id="registration-form" action="/submit" method="post">
-          <fieldset>
-            <legend>Attendee information</legend>
+          <section id="key-terms">
+            <h3>Key Terms</h3>
 
+            <dl>
+              <dt>HTML</dt>
+              <dd>
+                HyperText Markup Language, the standard markup language used to
+                define the structure and meaning of content on the web.
+              </dd>
+
+              <dt>CSS</dt>
+              <dd>
+                Cascading Style Sheets, the language used to control the
+                presentation and visual layout of HTML documents.
+              </dd>
+
+              <dt>Web Accessibility</dt>
+              <dd>
+                The practice of designing and developing websites so that people
+                with disabilities can perceive, understand, navigate, and
+                interact with the web.
+              </dd>
+            </dl>
+          </section>
+        </div>
+        <!-- horizontal line -->
+        <hr />
+
+        <!-- Conference Section + table -->
+
+        <div class="cards">
+          <section id="conference">
+            <h2>Conference Schedule</h2>
+
+            <p>
+              The summit spans three days of talks, workshops, and networking
+              focused on modern web standards.
+            </p>
+
+            <section id="schedule">
+              <table>
+                <caption>
+                  Day 1 — Friday, September 18, 2026
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Time</th>
+                    <th scope="col">Session</th>
+                    <th scope="col">Speakers</th>
+                    <th scope="col">Room</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>09:00–10:00</td>
+                    <td>Opening Keynote: The State of Web Standards</td>
+                    <td>Alex Rivera</td>
+                    <td>Auditorium A</td>
+                  </tr>
+
+                  <tr>
+                    <td>10:15–11:00</td>
+                    <td>Semantic HTML in Large Applications</td>
+                    <td>Priya Desai</td>
+                    <td>Room 101</td>
+                  </tr>
+
+                  <tr>
+                    <td>11:15–12:00</td>
+                    <td>Modern CSS Layout: Grid and Flexbox</td>
+                    <td>Jonas Meier</td>
+                    <td>Room 102</td>
+                  </tr>
+
+                  <tr>
+                    <td>13:30–14:30</td>
+                    <td>Inclusive Design and Web Accessibility</td>
+                    <td>Fatima Khan</td>
+                    <td>Room 103</td>
+                  </tr>
+
+                  <tr>
+                    <td>14:45–15:30</td>
+                    <td>Performance, Core Web Vitals, and Standards</td>
+                    <td>Luca Rossi</td>
+                    <td>Room 104</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+          </section>
+        </div>
+        <!-- horizontal line -->
+        <hr />
+
+        <!-- Featured speakers section -->
+
+        <div class="cards">
+          <section id="speakers-section">
+            <h2>Featured Speakers</h2>
+
+            <article class="speaker" aria-labelledby="alex-rivera">
+              <h3 id="alex-rivera">Alex Rivera</h3>
+              <p>
+                Alex is a standards advocate and chair of several working
+                groups, helping browser vendors and developers collaborate on
+                interoperable web features.
+              </p>
+              <h4>Topics</h4>
+              <ul class="topics">
+                <li>The State of Web Standards in 2026</li>
+                <li>Interoperability Across Modern Browsers</li>
+                <li>Building for the Next Decade of the Web</li>
+              </ul>
+            </article>
+
+            <article class="speaker" aria-labelledby="priya-desai">
+              <h3 id="priya-desai">Priya Desai</h3>
+              <p>
+                Priya is a frontend architect focusing on semantic markup,
+                maintainable design systems, and accessible component libraries
+                for large-scale products.
+              </p>
+              <h4>Topics</h4>
+              <ul class="topics">
+                <li>Semantic HTML in Design Systems</li>
+                <li>Structuring Complex Interfaces Accessibly</li>
+                <li>Documentation-Driven Frontend Architecture</li>
+              </ul>
+            </article>
+
+            <article class="speaker" aria-labelledby="fatima-khan">
+              <h3 id="fatima-khan">Fatima Khan</h3>
+              <p>
+                Fatima is an accessibility specialist who helps organizations
+                integrate inclusive design into every stage of their product
+                lifecycle.
+              </p>
+              <h4>Topics</h4>
+              <ul class="topics">
+                <li>Practical Web Accessibility Testing</li>
+                <li>Designing for Assistive Technologies</li>
+                <li>Accessibility as a Team Practice</li>
+              </ul>
+            </article>
+          </section>
+        </div>
+
+        <div class="footer-layout">
+          <!-- Registration Form Section -->
+          <section id="registration">
+            <h2>Registration</h2>
+
+            <p id="registration-info">
+              Reserve your seat for Web Standards Summit 2026 by completing the
+              registration form below.
+            </p>
+
+            <form id="registration-form" action="/submit" method="post">
+              <fieldset>
+                <legend>Attendee information</legend>
+
+                <br />
+
+                <div class="label-tag">
+                  <label for="name">Full name</label>
+                  <div class="nested-input">
+                    <input id="name" name="name" type="text" required />
+                  </div>
+                </div>
+
+                <br />
+
+                <div class="label-tag">
+                  <label for="email">Email</label>
+                  <div class="nested-input">
+                    <input id="email" name="email" type="email" required />
+                  </div>
+                </div>
+
+                <br />
+
+                <div>
+                  <label for="role">Role</label>
+                  <div class="nested-input">
+                    <select id="role" name="Select Your role" required>
+                      <option value="Select Your Role" selected disabled>
+                        Select your role
+                      </option>
+                      <option value="developer">Developer</option>
+                      <option value="designer">Designer</option>
+                      <option value="engineer">Engineer</option>
+                    </select>
+                  </div>
+                </div>
+
+                <br />
+                <div>
+                  <input type="checkbox" id="newsletter" required />
+                  <label for="newsletter">
+                    Subscribe to the Web Standards Summit newsletter
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend>Confirmation</legend>
+
+                <br />
+                <button type="submit">Submit registration</button>
+              </fieldset>
+            </form>
+          </section>
+
+          <!-- footer section -->
+
+          <footer id="contact">
+            <h2>Contact</h2>
+
+            <p>
+              For questions about tickets, sponsorships, or speaking
+              opportunities, contact the organizing team.
+            </p>
+
+            <i>Web Standards Summit Organizing Committee</i>
+            <address>
+              <em
+                >Email:
+                <a href="mailto:info@webstadardssummit.example"
+                  >info@webstadardssummit.example</a
+                ></em
+              >
+            </address>
+
+            <p>&copy; 2026 Web Standards Summit. All rights reserved.</p>
             <br />
-
-            <div class="label-tag">
-              <label for="name">Full name</label>
-              <div class="nested-input">
-                <input id="name" name="name" type="text" required />
-              </div>
-            </div>
-
-            <br />
-
-            <div class="label-tag">
-              <label for="email">Email</label>
-              <div class="nested-input">
-                <input id="email" name="email" type="email" required />
-              </div>
-            </div>
-
-            <br />
-
-            <div>
-              <label for="role">Role</label>
-              <div class="nested-input">
-                <select id="role" name="Select Your role" required>
-                  <option value="Select Your Role" selected disabled>
-                    Select your role
-                  </option>
-                  <option value="developer">Developer</option>
-                  <option value="designer">Designer</option>
-                  <option value="engineer">Engineer</option>
-                </select>
-              </div>
-            </div>
-
-            <br />
-            <div>
-              <input type="checkbox" id="newsletter" required />
-              <label for="newsletter">
-                Subscribe to the Web Standards Summit newsletter
-              </label>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend>Confirmation</legend>
-
-            <br />
-            <button type="submit">Submit registration</button>
-          </fieldset>
-        </form>
-      </section>
-    </main>
-
-    <!-- footer section -->
-
-    <footer id="contact">
-      <h2>Contact</h2>
-
-      <p>
-        For questions about tickets, sponsorships, or speaking opportunities,
-        contact the organizing team.
-      </p>
-
-      <i>Web Standards Summit Organizing Committee</i>
-      <address>
-        <em
-          >Email:
-          <a href="mailto:info@webstadardssummit.example"
-            >info@webstadardssummit.example</a
-          ></em
-        >
-      </address>
-
-      <p>&copy; 2026 Web Standards Summit. All rights reserved.</p>
-      <br />
-    </footer>
+          </footer>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
