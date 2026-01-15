@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+#header {
+  text-align: left;
+  margin: 15px 0;
+}
+
+#main-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: left;
+  margin-top: 20px;
+}
+
+#primary-navigation-link {
+  margin: 20px 0px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#primary-navigation-link > ul {
+  display: flex;
+  max-width: 600px;
+  justify-content: flex-start;
+  gap: 10px;
+  font-size: 18px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#primary-navigation-link > ul > li {
+  background-color: #d9efff;
+  padding: 10px 15px;
+  border: 1px solid #f8fcff;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+#primary-navigation-link > ul > li > a {
+  text-decoration: none;
+  color: #005592;
+}
+
+.cards {
+  width: 80%;
+  max-width: 900px;
+  background-color: #fffdfd;
+  margin-bottom: 20px;
+  padding: 20px;
+  line-height: 1.6;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.cards > h2,
+.cards > h3,
+.cards > p {
+  margin-bottom: 15px;
+}
+
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+#schedule {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#schedule > caption {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-radius: 5px;
+  width: 100%;
+}
+
+td,
+th {
+  border: none;
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #73a0e8;
+  color: white;
+}
+
+#speakers-section {
+  display: flex;
+  flex-wrap: wrap; /* wrap on smaller screens */
+  gap: 1.5rem; /* space between speaker cards */
+  max-width: 900px; /* limit container width */
+  padding: 1rem;
+}
+
+#speakers-section h2 {
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding-left: 0.5rem;
+}
+
+/* Each speaker card */
+.speaker {
+  background: #fffdfd;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  padding: 1rem 1.25rem;
+  flex: 1 1 300px; /* grow, shrink, base width */
+  min-width: 300px; /* prevents cards from getting too narrow */
+  min-height: 280px;
+}
+
+/* Speaker heading */
+.speaker h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+/* Topics list */
+.topics {
+  margin-top: 0.75rem;
+  padding-left: 1.25rem; /* indent bullet points */
+}
+
+/* Topics heading */
+.speaker h4 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.footer-layout {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+/* Left side: registration form */
+.footer-layout > #registration {
+  flex: 3;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Headings */
+#registration h2,
+#contact h2 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+/* Form styling */
+#registration-form fieldset {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#registration-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+#registration-form label[for="newsletter"] {
+  display: inline-block;
+  font-weight: 400;
+  margin-left: 0.5rem;
+}
+
+#registration-form input[type="text"],
+#registration-form input[type="email"],
+#registration-form select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+#registration-form button {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#registration-form button:hover {
+  background-color: #1d4ed8;
+}
+
+#contact {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  width: 280px;
+  height: 300px;
+  background-color: #fffdfd;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Contact section */
+#contact p,
+#contact i,
+#contact address {
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+#contact a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: #555;
+}

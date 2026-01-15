@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Web Standards Summit 2026</title>
   </head>
   <body>
@@ -26,7 +27,7 @@
           and inclusive web technologies.
         </p>
 
-        <nav aria-label="Primary Navigation">
+        <nav aria-label="Primary Navigation" id="primary-navigation-link">
           <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#conference">Schedule</a></li>
@@ -37,11 +38,8 @@
         </nav>
       </section>
 
-      <!-- horizontal line -->
-      <hr />
-
       <!-- About the summit section -->
-      <section id="about">
+      <section id="about" class="cards">
         <h2>About the Summit</h2>
 
         <p>
@@ -49,11 +47,7 @@
           standards that help teams build fast, accessible, and future-friendly
           web experiences.
         </p>
-      </section>
 
-      <!--  key term section -->
-
-      <section id="key-terms">
         <h3>Key Terms</h3>
 
         <dl>
@@ -78,12 +72,9 @@
         </dl>
       </section>
 
-      <!-- horizontal line -->
-      <hr />
-
       <!-- Conference Section + table -->
 
-      <section id="conference">
+      <section id="conference" class="cards">
         <h2>Conference Schedule</h2>
 
         <p>
@@ -91,7 +82,7 @@
           focused on modern web standards.
         </p>
 
-        <section>
+        <section id="schedule">
           <table>
             <caption>
               Day 1 — Friday, September 18, 2026
@@ -144,12 +135,9 @@
         </section>
       </section>
 
-      <!-- horizontal line -->
-      <hr />
-
       <!-- Featured speakers section -->
 
-      <section id="speakers">
+      <section id="speakers-section" class="cards">
         <h2>Featured Speakers</h2>
 
         <article class="speaker" aria-labelledby="alex-rivera">
@@ -198,94 +186,106 @@
         </article>
       </section>
 
-      <!-- Registration Form Section -->
+      <div class="footer-layout">
+        <!-- Registration Form Section -->
+        <section id="registration" class="cards">
+          <h2>Registration</h2>
 
-      <section id="registration">
-        <h2>Registration</h2>
+          <p id="registration-info">
+            Reserve your seat for Web Standards Summit 2026 by completing the
+            registration form below.
+          </p>
 
-        <p id="registration-info">
-          Reserve your seat for Web Standards Summit 2026 by completing the
-          registration form below.
-        </p>
+          <form id="registration-form" action="/submit" method="post">
+            <fieldset>
+              <legend>Attendee information</legend>
 
-        <form id="registration-form" action="/submit" method="post">
-          <fieldset>
-            <legend>Attendee information</legend>
+              <br />
 
-            <br />
-
-            <div class="label-tag">
-              <label for="name">Full name</label>
-              <div class="nested-input">
-                <input id="name" name="name" type="text" required />
+              <div class="label-tag">
+                <label for="name">Full name</label>
+                <div class="nested-input">
+                  <input id="name" name="name" type="text" required />
+                </div>
               </div>
-            </div>
 
-            <br />
+              <br />
 
-            <div class="label-tag">
-              <label for="email">Email</label>
-              <div class="nested-input">
-                <input id="email" name="email" type="email" required />
+              <div class="label-tag">
+                <label for="email">Email</label>
+                <div class="nested-input">
+                  <input id="email" name="email" type="email" required />
+                </div>
               </div>
-            </div>
 
-            <br />
+              <br />
 
-            <div>
-              <label for="role">Role</label>
-              <div class="nested-input">
-                <select id="role" name="Select Your role" required>
-                  <option value="Select Your Role" selected disabled>
-                    Select your role
-                  </option>
-                  <option value="developer">Developer</option>
-                  <option value="designer">Designer</option>
-                  <option value="engineer">Engineer</option>
-                </select>
+              <div>
+                <label for="role">Role</label>
+                <div class="nested-input">
+                  <select id="role" name="Select Your role" required>
+                    <option value="Select Your Role" selected disabled>
+                      Select your role
+                    </option>
+                    <option value="developer">Developer</option>
+                    <option value="designer">Designer</option>
+                    <option value="engineer">Engineer</option>
+                  </select>
+                </div>
               </div>
-            </div>
 
-            <br />
-            <div>
-              <input type="checkbox" id="newsletter" required />
-              <label for="newsletter">
-                Subscribe to the Web Standards Summit newsletter
-              </label>
-            </div>
-          </fieldset>
+              <br />
+              <div>
+                <input type="checkbox" id="newsletter" required />
+                <label for="newsletter">
+                  Subscribe to the Web Standards Summit newsletter
+                </label>
+              </div>
+            </fieldset>
 
-          <fieldset>
-            <legend>Confirmation</legend>
+            <fieldset>
+              <legend>Confirmation</legend>
 
-            <br />
-            <button type="submit">Submit registration</button>
-          </fieldset>
-        </form>
-      </section>
+              <br />
+              <button type="submit">Submit registration</button>
+            </fieldset>
+          </form>
+        </section>
+
+        <footer id="contact">
+          <h2>Contact</h2>
+
+          <p>
+            For questions about tickets, sponsorships, or speaking
+            opportunities, contact the organizing team.
+          </p>
+
+          <i>Web Standards Summit Organizing Committee</i>
+          <address>
+            <em
+              >Email:
+              <a href="mailto:info@webstadardssummit.example"
+                >info@webstadardssummit.example</a
+              ></em
+            >
+          </address>
+
+          <br />
+        </footer>
+      </div>
     </main>
 
     <!-- footer section -->
-
-    <footer id="contact">
-      <h2>Contact</h2>
-
-      <p>
-        For questions about tickets, sponsorships, or speaking opportunities,
-        contact the organizing team.
-      </p>
-
-      <i>Web Standards Summit Organizing Committee</i>
+    <footer class="site-footer">
+      <p>&copy; 2026 Web Standards Summit. All rights reserved.</p>
       <address>
         <em
-          >Email:
+          >General Inquiries:
           <a href="mailto:info@webstadardssummit.example"
-            >info@webstadardssummit.example</a
+            >hello@websummit.example</a
           ></em
         >
       </address>
-
-      <p>&copy; 2026 Web Standards Summit. All rights reserved.</p>
       <br />
     </footer>
   </body>
