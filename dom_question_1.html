@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Registration</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      form {
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+      }
+      h2 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      button {
+        width: 100%;
+        padding: 0.7rem;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      input.valid {
+        border-color: green;
+        background-color: #e6ffe6;
+      }
+
+      input.invalid {
+        border-color: red;
+        background-color: #ffe6e6;
+      }
+
+      .error-message {
+        color: red;
+        font-size: 0.85rem;
+        margin-top: -0.8rem;
+        margin-bottom: 0.8rem;
+        display: none;
+      }
+
+      .error-message.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="registrationForm">
+      <h2>Register</h2>
+
+      <label for="name">Full Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter your full name"
+        minlength="5"
+        maxlength="30"
+        required
+      />
+      <div class="error-message" id="nameError">
+        Name must be at least 5 characters.
+      </div>
+
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your email"
+        required
+      />
+      <div class="error-message" id="emailError">
+        Please enter a valid email.
+      </div>
+
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+        required
+      />
+      <div class="error-message" id="passwordError">
+        Password must have at least 6 characters, including uppercase,
+        lowercase, and a number.
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+  </body>
+
+  <script>
+    const form = document.getElementById("registrationForm");
+
+    form.addEventListener("input", function (e) {
+      const target = e.target;
+
+      // Name validation
+      if (target.name === "name") {
+        if (target.value.trim().length >= 5) {
+          target.classList.add("valid");
+          target.classList.remove("invalid");
+          document.getElementById("nameError").classList.remove("active");
+        } else {
+          target.classList.add("invalid");
+          target.classList.remove("valid");
+          document.getElementById("nameError").classList.add("active");
+        }
+      }
+
+      // Email validation (simple regex)
+      if (target.name === "email") {
+        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,4}$/;
+        if (emailPattern.test(target.value)) {
+          target.classList.add("valid");
+          target.classList.remove("invalid");
+          document.getElementById("emailError").classList.remove("active");
+        } else {
+          target.classList.add("invalid");
+          target.classList.remove("valid");
+          document.getElementById("emailError").classList.add("active");
+        }
+      }
+
+      // Password validation
+      if (target.name === "password") {
+        const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+        if (passwordPattern.test(target.value)) {
+          target.classList.add("valid");
+          target.classList.remove("invalid");
+          document.getElementById("passwordError").classList.remove("active");
+        } else {
+          target.classList.add("invalid");
+          target.classList.remove("valid");
+          document.getElementById("passwordError").classList.add("active");
+        }
+      }
+    });
+
+    // Form submit validation
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const password = form.password.value;
+
+      let isValid = true;
+
+      if (name.length < 3) isValid = false;
+      if (!/^[^ ]+@[^ ]+\.[a-z]{2,3}$/.test(email)) isValid = false;
+      if (password.length < 6) isValid = false;
+
+      if (isValid) {
+        alert("Form submitted successfully!");
+        form.reset();
+        form
+          .querySelectorAll("input")
+          .forEach((input) => input.classList.remove("valid"));
+      } else {
+        alert("Please fix errors before submitting!");
+      }
+    });
+  </script>
+</html>
