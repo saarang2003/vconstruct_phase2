@@ -29,10 +29,10 @@ function sendNotifications(user) {
       console.log(`Notification for user: ${user.name} (${user.id})`);
 
       if (result === "success") {
-        console.log(`✅ Notification sent successfully to ${user.name}`);
+        console.log(`Notification sent successfully to ${user.name}`);
         resolve(result);
       } else {
-        console.log(`❌ Notification failed for ${user.name}`);
+        console.log(`Notification failed for ${user.name}`);
         reject(result);
       }
     }, 1000);
